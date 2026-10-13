@@ -879,15 +879,22 @@ Résultat ← (A > B) ET NON(C &lt; A + B)</pre>
                         <h3 class="text-sm font-bold text-emerald-400">Corrections Complètes des 10 TPs (Partie 1)</h3>
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 h-80 overflow-y-auto custom-scrollbar space-y-4 text-xs font-mono">
                                                         <div>
-                                <span class="text-brand-400 font-bold block">// TP 1 : Affichage d'un message personnalisé avec nom</span>
+                                <span class="text-brand-400 font-bold block">// TP 11 : Tester si un nombre est Pair ou Impair</span>
 <pre class="text-slate-300">
-Algorithme TP1_AffichageMessage
-Variables nom : Chaîne
+Algorithme PairImpair
+Variables
+    N : Entier
 Début
-   Écrire("Entrez votre nom :")
-   Lire(nom)
-   Écrire("Bonjour, ", nom, " !")
+    Écrire("Donner un nombre entier : ")
+    Lire(N)
+
+    Si N MOD 2 = 0 Alors
+        Écrire("Le nombre est pair")
+    Sinon
+        Écrire("Le nombre est impair")
+    FinSi
 Fin
+
 
 
 
@@ -902,17 +909,22 @@ Fin
                             </div>
 
                             <div>
-                                <span class="text-brand-400 font-bold block">// TP 2 :Somme & Produit</span>
+                                <span class="text-brand-400 font-bold block">// TP 12 : Tester la divisibilité d’un nombre par 3 et 5</span>
 <pre class="text-slate-300">
-Algorithme TP2_SommeProduit
-Variables a, b, s, p : Entier
+Algorithme Divisibilite
+Variables
+    N : Entier
 Début
-   Écrire("Saisir deux entiers :")
-   Lire(a, b)
-   s ← a + b
-   p ← a * b
-   Écrire("Somme = ", s, " | Produit = ", p)
+    Écrire("Donner un nombre entier : ")
+    Lire(N)
+
+    Si (N MOD 3 = 0) ET (N MOD 5 = 0) Alors
+        Écrire("Le nombre est divisible par 3 et 5")
+    Sinon
+        Écrire("Le nombre n'est pas divisible par 3 et 5")
+    FinSi
 Fin
+
 
 
 
@@ -926,17 +938,22 @@ Fin
 </pre>
                             </div>
                                                         <div>
-                                <span class="text-brand-400 font-bold block">// TP 3 : Surface Cercle</span>
+                                <span class="text-brand-400 font-bold block">// TP 13 : Vérifier l'accès au tarif réduit</span>
 <pre class="text-slate-300">
-Algorithme TP3_SurfaceCercle
-Constantes PI = 3.14159
-Variables rayon, surface : Réel
+Algorithme TarifReduit
+Variables
+    Age : Entier
 Début
-   Écrire("Entrez le rayon du cercle :")
-   Lire(rayon)
-   surface ← PI * rayon * rayon
-   Écrire("Surface = ", surface)
+    Écrire("Donner votre âge : ")
+    Lire(Age)
+
+    Si (Age < 12) OU (Age > 65) Alors
+        Écrire("Vous bénéficiez du tarif réduit")
+    Sinon
+        Écrire("Vous ne bénéficiez pas du tarif réduit")
+    FinSi
 Fin
+
 
 
 
@@ -950,16 +967,22 @@ Fin
 </pre>
                             </div>
                             <div>
-                                <span class="text-brand-400 font-bold block">// TP 4 : Prix TTC</span>
-<pre class="text-slate-300">Algorithme TP4_PrixTTC
-Constantes TVA = 0.20
-Variables prixHT, prixTTC : Réel
+                                <span class="text-brand-400 font-bold block">// TP 14 :  Annee Bissextile</span>
+<pre class="text-slate-300">
+Algorithme AnneeBissextile
+Variables
+    Annee : Entier
 Début
-   Écrire("Entrez le prix HT :")
-   Lire(prixHT)
-   prixTTC ← prixHT * (1 + TVA)
-   Écrire("Prix TTC = ", prixTTC)
+    Écrire("Donner une année : ")
+    Lire(Annee)
+
+    Si (Annee MOD 400 = 0) OU ((Annee MOD 4 = 0) ET (Annee MOD 100 <> 0)) Alors
+        Écrire("L'année est bissextile")
+    Sinon
+        Écrire("L'année n'est pas bissextile")
+    FinSi
 Fin
+
 
 
 
@@ -973,18 +996,29 @@ Fin
 </pre>
                             </div>
                             <div>
-                                <span class="text-brand-400 font-bold block">// TP 5 : Permutation de 3 valeurs</span>
-<pre class="text-slate-300">Algorithme TP5_Permutation3
-Variables A, B, C, Temp : Entier
+                                <span class="text-brand-400 font-bold block">// TP 15 :   </span>
+<pre class="text-slate-300">
+Algorithme TriangleValide
+Variables
+    A, B, C : Réel
 Début
-   Écrire("Entrez trois entiers A, B, C :")
-   Lire(A, B, C)
-   Temp ← A
-   A ← B
-   B ← C
-   C ← Temp
-   Écrire("Après permutation : A = ", A, ", B = ", B, ", C = ", C)
+    Écrire("Donner la première longueur : ")
+    Lire(A)
+
+    Écrire("Donner la deuxième longueur : ")
+    Lire(B)
+
+    Écrire("Donner la troisième longueur : ")
+    Lire(C)
+
+    Si (A > 0) ET (B > 0) ET (C > 0) ET
+       (A + B > C) ET (A + C > B) ET (B + C > A) Alors
+        Écrire("Les trois longueurs forment un triangle valide")
+    Sinon
+        Écrire("Les trois longueurs ne forment pas un triangle valide")
+    FinSi
 Fin
+
 
 
 
