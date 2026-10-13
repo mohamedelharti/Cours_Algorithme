@@ -876,127 +876,244 @@ Résultat ← (A > B) ET NON(C &lt; A + B)</pre>
                 type: "tp-correction",
                 content: `
                     <div class="space-y-4">
-                        <h3 class="text-sm font-bold text-emerald-400"> Corrigé du TP 11 (Pair/Impair) au TP 15 </h3>
+                        <h3 class="text-sm font-bold text-emerald-400">Corrections Complètes des 10 TPs (Partie 1)</h3>
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 h-80 overflow-y-auto custom-scrollbar space-y-4 text-xs font-mono">
-                        <div>
+                                                        <div>
                                 <span class="text-brand-400 font-bold block">// TP 1 : Affichage d'un message personnalisé avec nom</span>
 <pre class="text-slate-300">
-//Corrigé du TP 11
-
-Algorithme PairImpair
-Variables
-    N : Entier
+Algorithme TP1_AffichageMessage
+Variables nom : Chaîne
 Début
-    Écrire("Donner un nombre entier : ")
-    Lire(N)
-
-    Si N MOD 2 = 0 Alors
-        Écrire("Le nombre est pair")
-    Sinon
-        Écrire("Le nombre est impair")
-    FinSi
+   Écrire("Entrez votre nom :")
+   Lire(nom)
+   Écrire("Bonjour, ", nom, " !")
 Fin
 
+
+
+
+
+
+
+
+
+
 </pre>
-</div>
-<div>
+                            </div>
+
+                            <div>
                                 <span class="text-brand-400 font-bold block">// TP 2 :Somme & Produit</span>
 <pre class="text-slate-300">
-//Corrigé du TP 12
-
-Algorithme Divisibilite
-Variables
-    N : Entier
+Algorithme TP2_SommeProduit
+Variables a, b, s, p : Entier
 Début
-    Écrire("Donner un nombre entier : ")
-    Lire(N)
-
-    Si (N MOD 3 = 0) ET (N MOD 5 = 0) Alors
-        Écrire("Le nombre est divisible par 3 et 5")
-    Sinon
-        Écrire("Le nombre n'est pas divisible par 3 et 5")
-    FinSi
+   Écrire("Saisir deux entiers :")
+   Lire(a, b)
+   s ← a + b
+   p ← a * b
+   Écrire("Somme = ", s, " | Produit = ", p)
 Fin
 
-</pre>
-</div>
-                                                        <div>
-                                <span class="text-brand-400 font-bold block">// TP 3 : Surface Cercle</span>
 
-<pre class="text-slate-300">
-//Corrigé du TP 13
 
-Algorithme TarifReduit
-Variables
-    Age : Entier
-Début
-    Écrire("Donner votre âge : ")
-    Lire(Age)
 
-    Si (Age < 12) OU (Age > 65) Alors
-        Écrire("Vous bénéficiez du tarif réduit")
-    Sinon
-        Écrire("Vous ne bénéficiez pas du tarif réduit")
-    FinSi
-Fin
+
+
+
+
+
 
 </pre>
-</div>
-                                                        <div>
-                                <span class="text-brand-400 font-bold block">// TP 3 : Surface Cercle</span>
-
-<pre class="text-slate-300">
-//Corrigé du TP 14
-
-Algorithme AnneeBissextile
-Variables
-    Annee : Entier
-Début
-    Écrire("Donner une année : ")
-    Lire(Annee)
-
-    Si (Annee MOD 400 = 0) OU ((Annee MOD 4 = 0) ET (Annee MOD 100 <> 0)) Alors
-        Écrire("L'année est bissextile")
-    Sinon
-        Écrire("L'année n'est pas bissextile")
-    FinSi
-Fin
-
-</pre>
-</div>
+                            </div>
                                                         <div>
                                 <span class="text-brand-400 font-bold block">// TP 3 : Surface Cercle</span>
 <pre class="text-slate-300">
-//Corrigé du TP 15
-
-Algorithme TriangleValide
-Variables
-    A, B, C : Réel
+Algorithme TP3_SurfaceCercle
+Constantes PI = 3.14159
+Variables rayon, surface : Réel
 Début
-    Écrire("Donner la première longueur : ")
-    Lire(A)
-
-    Écrire("Donner la deuxième longueur : ")
-    Lire(B)
-
-    Écrire("Donner la troisième longueur : ")
-    Lire(C)
-
-    Si (A > 0) ET (B > 0) ET (C > 0) ET
-       (A + B > C) ET (A + C > B) ET (B + C > A) Alors
-        Écrire("Les trois longueurs forment un triangle valide")
-    Sinon
-        Écrire("Les trois longueurs ne forment pas un triangle valide")
-    FinSi
+   Écrire("Entrez le rayon du cercle :")
+   Lire(rayon)
+   surface ← PI * rayon * rayon
+   Écrire("Surface = ", surface)
 Fin
 
 
+
+
+
+
+
+
+
+
 </pre>
+                            </div>
+                            <div>
+                                <span class="text-brand-400 font-bold block">// TP 4 : Prix TTC</span>
+<pre class="text-slate-300">Algorithme TP4_PrixTTC
+Constantes TVA = 0.20
+Variables prixHT, prixTTC : Réel
+Début
+   Écrire("Entrez le prix HT :")
+   Lire(prixHT)
+   prixTTC ← prixHT * (1 + TVA)
+   Écrire("Prix TTC = ", prixTTC)
+Fin
+
+
+
+
+
+
+
+
+
+
+</pre>
+                            </div>
+                            <div>
+                                <span class="text-brand-400 font-bold block">// TP 5 : Permutation de 3 valeurs</span>
+<pre class="text-slate-300">Algorithme TP5_Permutation3
+Variables A, B, C, Temp : Entier
+Début
+   Écrire("Entrez trois entiers A, B, C :")
+   Lire(A, B, C)
+   Temp ← A
+   A ← B
+   B ← C
+   C ← Temp
+   Écrire("Après permutation : A = ", A, ", B = ", B, ", C = ", C)
+Fin
+
+
+
+
+
+
+
+
+
+
+</pre>
+                            </div>
+                            <div>
+                                <span class="text-brand-400 font-bold block">// TP 6 : Moyenne Pondérée</span>
+<pre class="text-slate-300">Algorithme TP6_MoyennePonderee
+Variables note1, note2, note3, coeff1, coeff2, coeff3, moyenne : Réel
+Début
+   Écrire("Entrez les 3 notes et leurs coefficients :")
+   Lire(note1, coeff1, note2, coeff2, note3, coeff3)
+   moyenne ← (note1 * coeff1 + note2 * coeff2 + note3 * coeff3) / (coeff1 + coeff2 + coeff3)
+   Écrire("Moyenne pondérée = ", moyenne)
+Fin
+
+
+
+
+
+
+
+
+
+
+</pre>
+                            </div>
+                        
+
+                            <div>
+                                <span class="text-brand-400 font-bold block">// TP 7 : Conversion Secondes ➔ Heures/Min/Sec</span>
+<pre class="text-slate-300">
+Algorithme TP7_ConversionTemps
+Variables totalSec, h, m, s : Entier
+Début
+   Écrire("Entrez le nombre de secondes :")
+   Lire(totalSec)
+   h ← totalSec DIV 3600
+   m ← (totalSec MOD 3600) DIV 60
+   s ← totalSec MOD 60
+   Écrire(h, "h ", m, "m ", s, "s")
+Fin
+
+
+
+
+
+
+
+
+
+
+</pre>
+                            </div>
+
+                            <div>
+                                <span class="text-brand-400 font-bold block">// TP 8 : Résistance Équivalente</span>
+<pre class="text-slate-300">Algorithme TP8_ResistanceEquivalente
+Variables R1, R2, ReqSerie, ReqParallele : Réel
+Début
+   Écrire("Entrez R1 et R2 :")
+   Lire(R1, R2)
+   ReqSerie ← R1 + R2
+   ReqParallele ← (R1 * R2) / (R1 + R2)
+   Écrire("Résistance en série = ", ReqSerie)
+   Écrire("Résistance en parallèle = ", ReqParallele)
+Fin
+
+
+
+
+
+
+
+
+
+
+</pre>   
+                            </div>
+
+                            <div>
+                                <span class="text-brand-400 font-bold block">// TP 9 : Échange sans variable temporaire</span>
+<pre class="text-slate-300">Algorithme TP9_EchangeSansTemp
+Variables A, B : Entier
+Début
+   Écrire("Entrez deux entiers A et B :")
+   Lire(A, B)
+   A ← A + B
+   B ← A - B
+   A ← A - B
+   Écrire("Après échange : A = ", A, ", B = ", B)
+Fin
+
+
+
+
+
+
+
+
+
+
+</pre>   
+                            </div>
+
+                            <div>
+                                <span class="text-brand-400 font-bold block">// TP 10 : Carré et Cube d'un réel</span>
+<pre class="text-slate-300">Algorithme TP10_CarreCube
+Variables x, carre, cube : Réel
+Début
+   Écrire("Entrez un nombre réel :")
+   Lire(x)
+   carre ← x * x
+   cube ← x * x * x
+   Écrire("Carré = ", carre, ", Cube = ", cube)
+Fin</pre>
                         </div>
                         </div>
                     </div>
                 `
             },
+
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "6. Opérateurs de Comparaison",
