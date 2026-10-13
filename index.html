@@ -756,7 +756,7 @@ Fin</pre>
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "4. Opérateurs Logiques",
-                title: "Slide 12 : Tables de Vérité",
+                title: "12 : Tables de Vérité",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
@@ -783,7 +783,7 @@ Fin</pre>
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "5. Opérateurs Arithmétiques",
-                title: "Slide 13 : Priorités Arithmétiques & DIV / MOD",
+                title: "13 : Priorités Arithmétiques & DIV / MOD",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
@@ -804,7 +804,7 @@ Fin</pre>
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "6. Opérateurs de Comparaison",
-                title: "Slide 14 : Opérateurs de Comparaison",
+                title: "14 : Opérateurs de Comparaison",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
@@ -825,7 +825,7 @@ Fin</pre>
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "6. Opérateurs de Comparaison",
-                title: "Slide 15 : Évaluation d'Expressions Complexes",
+                title: "15 : Évaluation d'Expressions Complexes",
                 type: "exercise",
                 content: `
                     <div class="space-y-4">
@@ -849,7 +849,7 @@ Résultat ← (A > B) ET NON(C &lt; A + B)</pre>
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "6. Opérateurs de Comparaison",
-                title: "Slide 16 : Les 10 TPs de la Partie 2",
+                title: "16 : Les 10 TPs de la Partie 2",
                 type: "tp",
                 content: `
                     <div class="space-y-3">
@@ -872,16 +872,111 @@ Résultat ← (A > B) ET NON(C &lt; A + B)</pre>
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "6. Opérateurs de Comparaison",
-                title: "Slide 17 : Corrigés des TPs (Partie 2 - Section 1)",
+                title: "17 : Corrigés des TPs (Partie 2 - Section 1)",
                 type: "tp-correction",
                 content: `
                     <div class="space-y-4">
-                        <h3 class="text-sm font-bold text-emerald-400">✅ Corrigé TP 11 (Pair/Impair) & TP 14 (Année Bissextile)</h3>
+                        <h3 class="text-sm font-bold text-emerald-400"> Corrigé du TP 11 (Pair/Impair) au TP 15 </h3>
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-xs font-mono space-y-4">
 <pre class="text-slate-300">
+//Corrigé du TP 11
+
+Algorithme PairImpair
+Variables
+    N : Entier
+Début
+    Écrire("Donner un nombre entier : ")
+    Lire(N)
+
+    Si N MOD 2 = 0 Alors
+        Écrire("Le nombre est pair")
+    Sinon
+        Écrire("Le nombre est impair")
+    FinSi
+Fin
 
 </pre>
 <pre class="text-slate-300">
+//Corrigé du TP 12
+
+Algorithme Divisibilite
+Variables
+    N : Entier
+Début
+    Écrire("Donner un nombre entier : ")
+    Lire(N)
+
+    Si (N MOD 3 = 0) ET (N MOD 5 = 0) Alors
+        Écrire("Le nombre est divisible par 3 et 5")
+    Sinon
+        Écrire("Le nombre n'est pas divisible par 3 et 5")
+    FinSi
+Fin
+
+</pre>
+
+<pre class="text-slate-300">
+//Corrigé du TP 13
+
+Algorithme TarifReduit
+Variables
+    Age : Entier
+Début
+    Écrire("Donner votre âge : ")
+    Lire(Age)
+
+    Si (Age < 12) OU (Age > 65) Alors
+        Écrire("Vous bénéficiez du tarif réduit")
+    Sinon
+        Écrire("Vous ne bénéficiez pas du tarif réduit")
+    FinSi
+Fin
+
+</pre>
+
+<pre class="text-slate-300">
+//Corrigé du TP 14
+
+Algorithme AnneeBissextile
+Variables
+    Annee : Entier
+Début
+    Écrire("Donner une année : ")
+    Lire(Annee)
+
+    Si (Annee MOD 400 = 0) OU ((Annee MOD 4 = 0) ET (Annee MOD 100 <> 0)) Alors
+        Écrire("L'année est bissextile")
+    Sinon
+        Écrire("L'année n'est pas bissextile")
+    FinSi
+Fin
+
+</pre>
+<pre class="text-slate-300">
+//Corrigé du TP 15
+
+Algorithme TriangleValide
+Variables
+    A, B, C : Réel
+Début
+    Écrire("Donner la première longueur : ")
+    Lire(A)
+
+    Écrire("Donner la deuxième longueur : ")
+    Lire(B)
+
+    Écrire("Donner la troisième longueur : ")
+    Lire(C)
+
+    Si (A > 0) ET (B > 0) ET (C > 0) ET
+       (A + B > C) ET (A + C > B) ET (B + C > A) Alors
+        Écrire("Les trois longueurs forment un triangle valide")
+    Sinon
+        Écrire("Les trois longueurs ne forment pas un triangle valide")
+    FinSi
+Fin
+
+
 </pre>
                         </div>
                     </div>
@@ -890,23 +985,130 @@ Résultat ← (A > B) ET NON(C &lt; A + B)</pre>
             {
                 part: "Partie 2 : Les Opérateurs",
                 chap: "6. Opérateurs de Comparaison",
-                title: "Slide 18 : Corrigés des TPs (Partie 2 - Section 2)",
+                title: "18 : Corrigés des TPs (Partie 2 - Section 2)",
                 type: "tp-correction",
                 content: `
                     <div class="space-y-4">
-                        <h3 class="text-sm font-bold text-emerald-400">✅ Corrigé TP 19 (Extraction de chiffres d'un entier)</h3>
+                        <h3 class="text-sm font-bold text-emerald-400"> Corrigé TP 16 &  Corrigé TP 20</h3>
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-xs font-mono">
 <pre class="text-slate-300">
-Algorithme TP19_ExtractionChiffres
-Variables n, cent, diz, unit : Entier
+//Corrigé du TP 16
+
+Algorithme PointRectangle
+Variables
+    x, y : Réel
 Début
-   Écrire("Entrez un nombre à 3 chiffres :") // Ex: 457
-   Lire(n)
-   cent ← n DIV 100        // 4
-   diz  ← (n MOD 100) DIV 10 // 5
-   unit ← n MOD 10         // 7
-   Écrire("Centaines:", cent, " Dizaines:", diz, " Unités:", unit)
-Fin</pre>
+    Écrire("Donner l'abscisse x : ")
+    Lire(x)
+
+    Écrire("Donner l'ordonnée y : ")
+    Lire(y)
+
+    Si (x >= 0) ET (x <= 10) ET (y >= 0) ET (y <= 5) Alors
+        Écrire("Le point appartient au rectangle")
+    Sinon
+        Écrire("Le point n'appartient pas au rectangle")
+    FinSi
+Fin
+
+</pre>
+
+<pre class="text-slate-300">
+//Corrigé du TP 17
+
+Algorithme Authentification
+Variables
+    MotDePasse, PIN : Chaîne
+Début
+    Écrire("Saisir le mot de passe : ")
+    Lire(MotDePasse)
+
+    Écrire("Saisir le code PIN : ")
+    Lire(PIN)
+
+    Si (MotDePasse = "abc123") ET (PIN = "1234") Alors
+        Écrire("Accès autorisé")
+    Sinon
+        Écrire("Accès refusé")
+    FinSi
+Fin
+
+
+</pre>
+
+<pre class="text-slate-300">
+//Corrigé du TP 18
+
+
+Algorithme InversionBooleen
+Variables
+    B : Booléen
+Début
+    Écrire("Donner une valeur (Vrai ou Faux) : ")
+    Lire(B)
+
+    Si B = Vrai Alors
+        B ← Faux
+    Sinon
+        B ← Vrai
+    FinSi
+
+    Écrire("La nouvelle valeur est : ", B)
+Fin
+
+
+</pre>
+
+<pre class="text-slate-300">
+//Corrigé du TP 19
+
+
+Algorithme ChiffresNombre
+Variables
+    N, C, D, U : Entier
+Début
+    Écrire("Donner un nombre de trois chiffres : ")
+    Lire(N)
+
+    C ← N DIV 100
+    D ← (N DIV 10) MOD 10
+    U ← N MOD 10
+
+    Écrire("Centaines : ", C)
+    Écrire("Dizaines : ", D)
+    Écrire("Unités : ", U)
+Fin
+
+
+</pre>
+<pre class="text-slate-300">
+//Corrigé du TP 20
+
+
+
+Algorithme Intervalle
+Variables
+    a, b, N : Réel
+Début
+    Écrire("Donner la borne minimale a : ")
+    Lire(a)
+
+    Écrire("Donner la borne maximale b : ")
+    Lire(b)
+
+    Écrire("Donner un nombre N : ")
+    Lire(N)
+
+    Si (N >= a) ET (N <= b) Alors
+        Écrire("Le nombre appartient à l'intervalle")
+    Sinon
+        Écrire("Le nombre n'appartient pas à l'intervalle")
+    FinSi
+Fin
+
+</pre>
+
+
                         </div>
                     </div>
                 `
@@ -918,7 +1120,7 @@ Fin</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "7. Structure Si-Sinon & Si-SinonSi",
-                title: "Slide 19 : La Structure Conditionnelle Si-Sinon",
+                title: "19 : La Structure Conditionnelle Si-Sinon",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
@@ -942,7 +1144,7 @@ FinSi</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "7. Structure Si-Sinon & Si-SinonSi",
-                title: "Slide 20 : Conditions Imbriquées (SinonSi)",
+                title: "20 : Conditions Imbriquées (SinonSi)",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
@@ -965,7 +1167,7 @@ FinSi</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "8. Structure Selon-Cas",
-                title: "Slide 21 : Aiguillage Aigüe : Selon-Cas",
+                title: "21 : Aiguillage Aigüe : Selon-Cas",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
@@ -988,7 +1190,7 @@ FinSelon</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "9. Conditions Simples vs 10. Conditions Composées",
-                title: "Slide 22 : Conditions Simples vs Composées",
+                title: "22 : Conditions Simples vs Composées",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
@@ -1010,7 +1212,7 @@ FinSelon</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "10. Conditions Composées",
-                title: "Slide 23 : Pièges Classiques à Éviter",
+                title: "23 : Pièges Classiques à Éviter",
                 type: "exercise",
                 content: `
                     <div class="space-y-4">
@@ -1030,7 +1232,7 @@ FinSelon</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "10. Conditions Composées",
-                title: "Slide 24 : Les 10 TPs de la Partie 3",
+                title: "24 : Les 10 TPs de la Partie 3",
                 type: "tp",
                 content: `
                     <div class="space-y-3">
@@ -1053,7 +1255,7 @@ FinSelon</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "10. Conditions Composées",
-                title: "Slide 25 : Corrigé TP 25 (Facturation Photocopies)",
+                title: "25 : Corrigé TP 25 (Facturation Photocopies)",
                 type: "tp-correction",
                 content: `
                     <div class="space-y-4">
@@ -1080,7 +1282,7 @@ Fin</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "10. Conditions Composées",
-                title: "Slide 26 : Corrigé TP 30 (Équation 2nd Degré ax²+bx+c=0)",
+                title: "26 : Corrigé TP 30 (Équation 2nd Degré ax²+bx+c=0)",
                 type: "tp-correction",
                 content: `
                     <div class="space-y-4">
@@ -1114,7 +1316,7 @@ Fin</pre>
             {
                 part: "Partie 3 : Structures de Contrôle",
                 chap: "10. Conditions Composées",
-                title: "Slide 27 : Synthèse de la Partie 3",
+                title: "27 : Synthèse de la Partie 3",
                 type: "theory",
                 content: `
                     <div class="space-y-4">
